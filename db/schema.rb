@@ -11,16 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160116001529) do
+ActiveRecord::Schema.define(version: 20180604191629) do
 
   create_table "rsvps", force: :cascade do |t|
     t.string   "party"
     t.integer  "attendees"
     t.text     "comment"
-    t.boolean  "accept",     default: false
+    t.boolean  "accept",           default: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email"
+    t.boolean  "alcohol"
+    t.integer  "drinks"
+    t.boolean  "acceptcalifornia"
+    t.string   "hotel"
+    t.string   "number"
+    t.string   "address"
   end
 
   create_table "users", force: :cascade do |t|

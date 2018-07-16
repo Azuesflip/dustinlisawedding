@@ -7,11 +7,27 @@
 
     <div class="form-group">
       <div class="control-label pull-left">
-        <%= r.label :party, 'Name' %> <span class="required">*</span>
+        <%= r.label :party, 'Name\'s of people attending' %> <span class="required">*</span>
       </div>
       <div class="control-label">
-        <%= r.text_field :party, class: 'form-control', placeholder: 'Individual or family name', autofocus: true %>
+        <%= r.text_field :party, class: 'form-control', placeholder: 'Please enter names separated by comma\'s', autofocus: true %>
       </div>
+    </div>
+
+    <div class="form-group">
+      <%= r.radio_button :accept, true, :checked => true %>
+      <%= r.label :accept, 'Will attend in Colorado' %>
+      &nbsp;&nbsp;&nbsp;
+      <%= r.radio_button :accept, false, :checked => false %>
+      <%= r.label :accept, 'Will not attend in Colorado' %>
+    </div>
+
+    <div class="form-group">
+      <%= r.radio_button :accept, true, :checked => true %>
+      <%= r.label :acceptcalifornia, 'Will attend in California' %>
+      &nbsp;&nbsp;&nbsp;
+      <%= r.radio_button :accept, false, :checked => false %>
+      <%= r.label :acceptcalifornia, 'Will not attend in California' %>
     </div>
 
     <div class="form-group">
@@ -24,11 +40,30 @@
     </div>
 
     <div class="form-group">
-      <%= r.radio_button :accept, true, :checked => true %>
-      <%= r.label :accept, 'Accepts with Pleasure' %>
+      <%= r.radio_button :alcohol, true, :checked => true %>
+      <%= r.label :alcohol, 'We will be drinking alcohol' %>
       &nbsp;&nbsp;&nbsp;
-      <%= r.radio_button :accept, false, :checked => false %>
-      <%= r.label :accept, 'Declines with Regrets' %>
+      <%= r.radio_button :alcohol, false, :checked => false %>
+      <%= r.label :alcohol, 'We will not be drinking alcohol' %>
+    </div>
+
+    <div class="form-group">
+      <div class="control-label pull-left">
+        <%= r.label :drinks, 'Number of drinks we will have' %> <span class="required">*</span>
+      </div>
+      <div class="control-label">
+        <%= r.number_field :drinks, class: 'form-control', placeholder: 'Enter 0 (Zero) if not drinking' %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="control-label pull-left">
+        <%= r.label :hotel %>
+      </div>
+      <div class="control-label">
+        <%= r.text_field :hotel, class: 'form-control' %>
+        <small class="pull-left">Which hotel will your party stay at. Leave blank if you are not staying in a hotel.</small>
+      </div>
     </div>
 
     <div class="form-group">
@@ -38,6 +73,26 @@
       <div class="control-label">
         <%= r.text_field :email, class: 'form-control' %>
         <small class="pull-left">We will only email you once a few days before the wedding</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="control-label pull-left">
+        <%= r.label :number %>
+      </div>
+      <div class="control-label">
+        <%= r.text_field :number, class: 'form-control' %>
+        <small class="pull-left">In case we need to contact you</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="control-label pull-left">
+        <%= r.label :address %>
+      </div>
+      <div class="control-label">
+        <%= r.text_field :address, class: 'form-control' %>
+        <small class="pull-left">We will mail you something special to show our appreciation</small>
       </div>
     </div>
 
@@ -60,7 +115,7 @@
     </div>
 
     <div class="text-center">
-      <%#Uncomment for reCAPTCHA= recaptcha_tags %>
+      <%= recaptcha_tags %>
     </div>
 
     <div class='form-group'>

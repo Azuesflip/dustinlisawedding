@@ -2,16 +2,34 @@
   <thead>
   <tr>
     <th>
-      <%= sortable 'party', 'Name' %>
+      <%= sortable 'party', 'Name\'s of Attendees' %>
     </th>
     <th>
       <%= sortable 'attendees', 'Number of Attendees' %>
     </th>
     <th>
-      <%= sortable 'accept', 'Accept' %>
+      <%= sortable 'accept', 'Accept Colorado' %>
+    </th>
+    <th>
+      <%= sortable 'acceptcalifornia', 'Accept California' %>
+    </th>
+    <th>
+      <%= sortable 'attendees', 'Number of Drinks' %>
+    </th>
+    <th>
+      <%= sortable 'accept', 'Drinking?' %>
+    </th>
+    <th>
+      <%= sortable 'hotel', 'Hotel' %>
     </th>
     <th>
       Comment
+    </th>
+    <th>
+      Address
+    </th>
+    <th>
+      Phone
     </th>
     <th>
       Email
@@ -37,7 +55,25 @@
         <%= human_boolean(r.accept) %>
       </td>
       <td>
+        <%= human_boolean(r.acceptcalifornia) %>
+      </td>
+      <td>
+        <%= r.drinks %>
+      </td>
+      <td>
+        <%= human_boolean(r.alcohol) %>
+      </td>
+      <td>
+        <%= r.hotel %>
+      </td>
+      <td>
         <%= simple_format(r.comment) %>
+      </td>
+      <td>
+        <%= r.address %>
+      </td>
+      <td>
+        <%= r.number %>
       </td>
       <td>
         <%= r.email %>

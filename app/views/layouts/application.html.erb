@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Andrea & Esau's Wedding</title>
+  <title>Lisa & Dustin's Wedding</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -37,12 +37,10 @@
 
 </head>
 <body>
-  <% if user_signed_in? %>
-    <%= render 'shared/menu' %>
-  <% end %>
+  <%= render 'shared/menu' %>
 
   <div class='container'>
-    <h1 class="text-center">Andrea & Esau's Wedding</h1>
+    <h1 class="text-center">Lisa & Dustin's Wedding</h1>
     <hr />
     <div class="main-body">
       <%= render 'shared/messages' %>

@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  root 'rsvps#new'
+  root 'rsvps#savethedate'
   resources :rsvps, only: [:index, :new, :create, :destroy] do
     collection do
       get 'thankyou'
       get 'search'
+      get 'savethedate'
+      get 'faq'
     end
   end
   devise_for :users,

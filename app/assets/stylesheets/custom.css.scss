@@ -9,7 +9,7 @@ body {
 }
 
 html {
-  background: #DFE8E5 url('//drive.google.com/uc?id=0B38f1xKqr2sIdzI2QjRzVDQwVkU') no-repeat center center fixed;
+  background: #DFE8E5 url('http://planinar.info/wp-content/uploads/2017/12/rustic-wedding-background-29-rustic-wedding-invitation-background-designs-vizio-wedding-768x512.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -26,7 +26,7 @@ html {
 }
 
 .center-box {
-  max-width: 500px;
+  max-width: 564px;
   margin: 0 auto;
   background: #f2f2f2;
   padding: 0 30px 0 30px;
@@ -36,13 +36,42 @@ html {
   font-size: 18px;
 }
 
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+}
+
+.iframe-container > *{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
 .guest-list {
-  max-width: 950px;
+  max-width: 1250px;
   font-family: $font-normal;
   font-size: 14px;
 }
 
 .thank-you p {
+  font-family: $font-normal;
+  font-size: 19px;
+}
+
+.thank-you li {
   font-family: $font-normal;
   font-size: 15px;
 }
