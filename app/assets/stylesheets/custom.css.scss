@@ -9,7 +9,7 @@ body {
 }
 
 html {
-  background: #DFE8E5 url('http://planinar.info/wp-content/uploads/2017/12/rustic-wedding-background-29-rustic-wedding-invitation-background-designs-vizio-wedding-768x512.jpg') no-repeat center center fixed;
+  background: #DFE8E5 url('https://docs.google.com/uc?id=1RfTHILWZ14qk2xTJGPQ_7rvfRU-lqryc') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -135,4 +135,21 @@ textarea,
 .btn-guest-list {
   margin-top: 42px;
   margin-bottom: 20px;
+}
+
+.photos {
+    display:block;
+    width:100%;
+}
+
+.photos img {
+    padding:10px;
+    width: 50%;
+    border-radius: 25px;
+    background: url(paper.gif);
+    background-position: left top;
+    background-repeat: repeat;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }

@@ -1,5 +1,5 @@
 class RsvpsController < ApplicationController
-  before_action :authenticate_user!, except: [:new, :create, :thankyou, :faq, :savethedate, :search]
+  before_action :authenticate_user!, except: [:new, :create, :photo, :thankyou, :faq, :savethedate, :search]
   #before_action :set_rsvp, only: [:destroy]
   helper_method :sort_column, :sort_direction
 

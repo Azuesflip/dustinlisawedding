@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get 'thankyou'
       get 'search'
       get 'savethedate'
+      get 'photo'
       get 'faq'
     end
   end
