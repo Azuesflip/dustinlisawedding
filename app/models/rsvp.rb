@@ -7,8 +7,14 @@ class Rsvp < ActiveRecord::Base
 
   validates :party, presence: true, length: { minimum: 5 }
   validates :attendees, presence: true
-  #validates :accept, presence: true
+  validates :accept, presence: true
+  validates :acceptcalifornia, presence: true
   validates :drinks, presence: true
+  validates :address, presence: true
+  validates :hotel, presence: true
+  validates :number, presence: true
+  validates :attendees, presence: true
+  validates :alcohol, presence: true
   validates :comment, length: { minimum: 5 }, allow_blank: true
   validates :email, format: { with: VALID_EMAIL_REGEX }, allow_blank: true
   validates :rsvp_code, presence: true
