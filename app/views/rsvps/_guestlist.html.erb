@@ -14,12 +14,6 @@
       <%= sortable 'acceptcalifornia', 'Accept California' %>
     </th>
     <th>
-      <%= sortable 'attendees', 'Number of Drinks' %>
-    </th>
-    <th>
-      <%= sortable 'accept', 'Drinking?' %>
-    </th>
-    <th>
       <%= sortable 'hotel', 'Hotel' %>
     </th>
     <th>
@@ -56,12 +50,6 @@
       </td>
       <td>
         <%= human_boolean(r.acceptcalifornia) %>
-      </td>
-      <td>
-        <%= r.drinks %>
-      </td>
-      <td>
-        <%= human_boolean(r.alcohol) %>
       </td>
       <td>
         <%= r.hotel %>

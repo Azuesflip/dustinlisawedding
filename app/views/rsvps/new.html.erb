@@ -7,14 +7,14 @@
 
     <div class="form-group">
       <div class="control-label pull-left">
-        <%= r.label :party, 'Name\'s of people attending' %> <span class="required">*</span>
+        <%= r.label :party, 'Name\'s of people attending only names on invitation' %> <span class="required">*</span>
       </div>
       <div class="control-label">
         <%= r.text_field :party, class: 'form-control', placeholder: 'Please enter names separated by comma\'s', autofocus: true %>
       </div>
     </div>
 
-    <p>Will you attend in Colorado?</p> <span class="required">*</span>
+    <p>Will you attend in Colorado? (please only RSVP to event(s) on invite)</p> <span class="required">*</span>
 
     <div class="form-group">
       <%= r.radio_button :accept, true, :checked => true %>
@@ -24,7 +24,7 @@
       <%= r.label :accept, 'Will not attend in Colorado' %>
     </div>
 
-    <p>Will you attend in California?</p> <span class="required">*</span>
+    <p>Will you attend in California? (please only RSVP to event(s) on invite)</p> <span class="required">*</span>
 
     <div class="form-group">
       <%= r.radio_button :acceptcalifornia, true, :checked => true %>
@@ -43,7 +43,7 @@
       </div>
     </div>
 
-    <p>Will you be drinking alcohol?</p> <span class="required">*</span>
+    <!--<p>Will you be drinking alcohol?</p> <span class="required">*</span>
 
     <div class="form-group">
       <%= r.radio_button :alcohol, true, :checked => true %>
@@ -60,7 +60,7 @@
       <div class="control-label">
         <%= r.number_field :drinks, class: 'form-control', placeholder: 'Enter 0 (Zero) if not drinking' %>
       </div>
-    </div>
+    </div>-->
 
     <div class="form-group">
       <div class="control-label pull-left">
@@ -68,7 +68,7 @@
       </div>
       <div class="control-label">
         <%= r.text_field :hotel, class: 'form-control' %>
-        <small class="pull-left">Which hotel will your party stay at. Leave blank if you are not staying in a hotel.</small> <span class="required">*</span>
+        <small class="pull-left">Which hotel will your party stay at. Leave blank if you are not staying in a hotel.</small>
       </div>
     </div>
 
@@ -84,7 +84,7 @@
 
     <div class="form-group">
       <div class="control-label pull-left">
-        <%= r.label :number %>
+        <%= r.label :number, 'Phone Number' %>
       </div>
       <div class="control-label">
         <%= r.text_field :number, class: 'form-control' %>
