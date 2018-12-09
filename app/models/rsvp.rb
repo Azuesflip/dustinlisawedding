@@ -9,7 +9,6 @@ class Rsvp < ActiveRecord::Base
   validates :attendees, presence: true
   validates :accept, presence: true
   validates :acceptcalifornia, presence: true
-  validates :drinks, presence: true
   validates :address, presence: true
   validates :number, presence: true
   validates :attendees, presence: true
