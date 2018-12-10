@@ -51,8 +51,7 @@ class RsvpsController < ApplicationController
   private
 
   def rsvp_params
-    params.require(:rsvp).permit(:party, :attendees, :drinks, :alcohol, 
-      :email, :comment, :address, :number, :hotel, :acceptcalifornia, :accept, :rsvp_code)
+    params.require(:rsvp).permit(:party, :attendees, :comment, :address, :number, :acceptcalifornia, :accept)
   end
 
   def sort_column
