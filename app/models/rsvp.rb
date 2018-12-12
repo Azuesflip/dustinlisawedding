@@ -22,12 +22,4 @@ class Rsvp < ActiveRecord::Base
       end
     end
   end
-
-  private
-
-  def valid_code
-    if rsvp_code.upcase != ENV['RSVP_CODE']
-      errors.add(:rsvp_code, 'does not match invitation code')
-    end
-  end
 end

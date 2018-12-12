@@ -14,19 +14,10 @@
       <%= sortable 'acceptcalifornia', 'Accept California' %>
     </th>
     <th>
-      <%= sortable 'hotel', 'Hotel' %>
-    </th>
-    <th>
       Comment
     </th>
     <th>
       Address
-    </th>
-    <th>
-      Phone
-    </th>
-    <th>
-      Email
     </th>
     <th>
       <%= sortable 'created_at', 'Date' %>
@@ -52,9 +43,6 @@
         <%= human_boolean(r.acceptcalifornia) %>
       </td>
       <td>
-        <%= r.hotel %>
-      </td>
-      <td>
         <%= simple_format(r.comment) %>
       </td>
       <td>
@@ -62,9 +50,6 @@
       </td>
       <td>
         <%= r.number %>
-      </td>
-      <td>
-        <%= r.email %>
       </td>
       <td>
         <%= r.created_at.strftime("%b %d %Y") %>
