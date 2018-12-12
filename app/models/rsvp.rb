@@ -10,7 +10,6 @@ class Rsvp < ActiveRecord::Base
   validates :number, presence: true
   validates :attendees, presence: true
   validates :comment, length: { minimum: 5 }, allow_blank: true
-  validate :valid_code
 
   default_scope -> { order('lower(party) asc') }
 
