@@ -4,8 +4,8 @@ class Rsvp < ActiveRecord::Base
 
   validates :party, presence: true, length: { minimum: 1 }
   validates :attendees, presence: true
-  validates :accept, presence: true
-  validates :acceptcalifornia, presence: true
+  #validates :accept, presence: true
+  #validates :acceptcalifornia, presence: true
   validates :address, presence: true
   validates :number, presence: true
   validates :attendees, presence: true
