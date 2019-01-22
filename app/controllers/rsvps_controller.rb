@@ -4,9 +4,9 @@ class RsvpsController < ApplicationController
   helper_method :sort_column, :sort_direction
 
   def index
-    @rsvps = Rsvp.order(sort_column + ' ' + sort_direction)
+    @rsvps = Rsvp.reorder(id: :desc)
     @rsvps_paginate = @rsvps.paginate(page: params[:page], per_page: 15)
-    @attendees_sum = @rsvps.where(accept: true).sum(:attendees)
+    @attendees_sum = @rsvps.sum(:attendees)
 
     respond_to do |format|
       format.html
@@ -21,8 +21,8 @@ class RsvpsController < ApplicationController
   def create
     @rsvp = Rsvp.new(rsvp_params)
 
-    if verify_recaptcha(model: @rsvp) && @rsvp.save  #Uncomment to use reCAPTCHA
-    #if @rsvp.save                                     #Comment to use reCAPTCHA
+    #if verify_recaptcha(model: @rsvp) && @rsvp.save  #Uncomment to use reCAPTCHA
+    if @rsvp.save                                     #Comment to use reCAPTCHA
       flash[:success] = 'Thank you for taking the time to fill this RSVP!'
       redirect_to thankyou_rsvps_path
     else
@@ -41,7 +41,7 @@ class RsvpsController < ApplicationController
 
   def search
     if params[:search].present?
-      @rsvps = Rsvp.search params[:search], fields: [:party], page: params[:page], per_page: 15
+      @rsvps = Rsvp.search params[:search], fields: [:created_at], page: params[:page], per_page: 15
      @rsvps_count = @rsvps.total_count
     else
       @rsvps = Rsvp.paginate(page: params[:page], per_page: 15)
@@ -55,7 +55,7 @@ class RsvpsController < ApplicationController
   end
 
   def sort_column
-    Rsvp.column_names.include?(params[:sort]) ? params[:sort] : 'party'
+    Rsvp.column_names.include?(params[:sort]) ? params[:sort] : 'created_at'
   end
 
   def sort_direction
